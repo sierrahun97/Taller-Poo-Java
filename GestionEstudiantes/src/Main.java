@@ -7,7 +7,7 @@ public class Main {
         Estudiante estudiante1 = new Estudiante("Juan", 123, 3.5);
         Estudiante estudiante2 = new Estudiante("Santi", 456, 4.5);
         Estudiante estudiante3 = new Estudiante("Yecibeth", 789, 4.7);
-        Estudiante estudiante4 = new Estudiante("Esteban", 123, 4.7);
+//        Estudiante estudiante4 = new Estudiante("Esteban", 123, 4.7);
 
         //Crear un objeto escuela
         Escuela escuela = new Escuela();
@@ -15,7 +15,7 @@ public class Main {
         escuela.agregarEstudiante(estudiante1);
         escuela.agregarEstudiante(estudiante2);
         escuela.agregarEstudiante(estudiante3);
-        escuela.agregarEstudiante(estudiante4);
+//        escuela.agregarEstudiante(estudiante4);
         System.out.println(escuela.getEstudiantes());
 
 
@@ -47,6 +47,7 @@ public class Main {
                 case '2':
                     System.out.println("Escribe el número de identificación del estudiante: ");
                     int buscarIdentificacion = scanner.nextInt();
+                    scanner.nextLine();
                     escuela.buscarEstudiante(buscarIdentificacion);
                     System.out.println(escuela.buscarEstudiante(buscarIdentificacion));
                     break;

@@ -20,20 +20,27 @@ public class Escuela {
     }
 
     public void agregarEstudiante(Estudiante estudiante) {
-
+    if (listaEstudiantes.size() == 0){
+        listaEstudiantes.add(estudiante);
+    } else {
         for (Estudiante e : listaEstudiantes) {
             if (e.getIdentificacion() == estudiante.getIdentificacion()) {
                 System.out.println("Ya existe el estudiante");
             } else {
                 listaEstudiantes.add(estudiante);
+                System.out.println("Se agregó el estudiante");
             }
         }
     }
 
-    public Estudiante buscarEstudiante(int identificacion) {
+    }
+
+    public String buscarEstudiante(int identificacion) {
         for (Estudiante e : listaEstudiantes) {
             if (e.getIdentificacion() == identificacion) {
-                return e;
+                System.out.println(e);
+                return "Estudiante encontrado: " + e;
+
             } else {
                 System.out.println("No existe el estudiante");
             }
